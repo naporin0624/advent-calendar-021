@@ -4,7 +4,6 @@ const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: ['webpack/hot/poll?100', './src/main.ts'],
-  watch: true,
   target: 'node',
   externals: [
     nodeExternals({
@@ -20,7 +19,6 @@ module.exports = {
       },
     ],
   },
-  mode: 'development',
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },

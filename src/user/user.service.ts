@@ -9,7 +9,7 @@ export class UserService {
     constructor(@InjectRepository(User) private readonly userRepository: Repository<User>) {}
 
     async findById(id: number) {
-        return await this.userRepository.findOne(id) || {msg: 'user not found'};
+        return await this.userRepository.findOne(id);
     }
 
     async create(createUserDto: CreateUserDto) {
