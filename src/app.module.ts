@@ -10,7 +10,7 @@ import ormConfig from '../ormconfig.json';
 const { cli, migrations, ...typeOrmConfig } = {
   ...ormConfig,
   entities: getMetadataArgsStorage().tables.map(tbl => tbl.target),
-}
+};
 
 @Module({
   imports: [TypeOrmModule.forRoot(typeOrmConfig as TypeOrmModuleOptions), UserModule],
